@@ -1,0 +1,13 @@
+name: hello-world
+
+on: push
+
+jobs: 
+  hello-world-job:
+    # will create a vm or container to run these features either locally or in GitHub hosted
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: check out repository code
+        uses: actions/checkout@v4
+      - run: echo "$(cat hello_world.txt)"
